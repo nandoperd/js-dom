@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element</title>
+</head>
+<body>
+    <h1 id="judul"></h1>
+    <p id="deskripsi"></p>
+
+    <div id="content" class="content">
+        <h1>JS DOM</h1>
+        <p>Mempelajari javascript DOM</p>
+    </div>
+
+    <div id="bab" class="bab">
+        <h1 id="title" class="title">Bab 1</h1>
+        <p id="description" class="description">Mempelajari javascript</p>
+    </div>
+
+    <div id="mapel" class="mapel">
+        <!-- isinya kosong, ditambahkan lewat script -->
+    </div>
+
+    <script>
+        const judul = document.getElementById("judul")
+        judul.textContent = "Element" // mengubah isi judul
+
+        const deskripsi = document.getElementById("deskripsi")
+        deskripsi.textContent = "Mempelajari element pada bab javascript DOM"
+
+        // element property
+        console.info(content.id)
+        console.info(content.className)
+        console.info(content.tagName)
+
+        // element method
+        // const title = document.getElementById("title")
+        // const description = document.getElementById("description")
+
+        // title.remove()
+        // description.remove()
+
+        // bisa juga langsung seperti ini :
+        document.getElementById("title").remove()
+        document.getElementById("description").remove()
+
+        // create element
+        const mapel = document.getElementById("mapel")
+
+        const pelajaran = document.createElement("h1") // create element
+        pelajaran.textContent = "Kalkulus" // create content
+        mapel.appendChild(pelajaran) // memasukkan pelajaran ke dalam parent mapel
+
+        const nilai = document.createElement("p")
+        nilai.textContent = "Nilai : 80"
+        mapel.appendChild(nilai)
+    </script>
+</body>
+</html>

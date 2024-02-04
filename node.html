@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node</title>
+</head>
+<body>
+    <ul id="menu">
+        <li id="satu">Pertama</li>
+        <li id="dua">Kedua</li>
+        <li id="tiga">Ketiga</li>
+    </ul>
+
+    <script>
+        const menu = document.getElementById("menu")
+        console.info(menu)
+
+        // node property
+        console.info(menu.childNodes) // mengambil data NodeList
+
+        // node method
+        menu.removeChild(document.getElementById("satu")) // menghapus child satu pada menu
+
+        const dua = document.getElementById("dua")
+        console.info(dua)
+
+        // node property
+        console.info(dua.textContent) // mengambil data detail/konten
+        console.info(dua.previousSibling) // mengambil saudara/data sebelumnya
+        console.info(dua.nextSibling) // mengambil saudara/data sesudah
+    </script>
+</body>
+</html>
